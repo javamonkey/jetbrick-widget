@@ -1,0 +1,69 @@
+// Set this to true to add support for IE 7.
+$supportIE7             : true;
+
+// Font
+// --------------------------
+$baseFontFamily         : "Microsoft YaHei", Helvetica, Verdana, Tahoma, Calibri !default;
+$baseFontSize           : 13px !default;
+$baseLineHeight         : 1.4 !default;
+
+// Grid
+// --------------------------
+// default 1200(70px,30px);  960(60px,20px);
+$gridColumns            : 12 !default;
+$gridColumnWidth        : 60px !default;
+$gridGutterWidth        : 20px !default;
+$gridRowWidth           : ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
+
+$fluidGridColumnWidth   : percentage($gridColumnWidth/$gridRowWidth) !default;
+$fluidGridGutterWidth   : percentage($gridGutterWidth/$gridRowWidth) !default;
+
+// Form
+// --------------------------
+$inputHeight            : 30px !default;   // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+
+// Link
+// --------------------------
+$linkColor              : #08c !default;
+$linkColorHover         : darken($linkColor, 15%) !default;
+
+// Colors
+// --------------------------
+$infoTextColor          : #3a87ad !default;
+$infoBackgroundColor    : #d9edf7 !default;
+$infoBorderColor        : darken(adjust-hue($infoBackgroundColor, -10), 7%) !default;
+
+$successTextColor       : #468847 !default;
+$successBackgroundColor : #dff0d8 !default;
+$successBorderColor     : darken(adjust-hue($successBackgroundColor, -10), 5%) !default;
+
+$warningTextColor       : #c09853 !default;
+$warningBackgroundColor : #fcf8e3 !default;
+$warningBorderColor     : darken(adjust-hue($warningBackgroundColor, -10), 3%) !default;
+
+$dangerTextColor        : #b94a48 !default;
+$dangerBackgroundColor  : #f2dede !default;
+$dangerBorderColor      : darken(adjust-hue($dangerBackgroundColor, -10), 3%) !default;
+
+
+// Grays
+// -------------------------
+$black                  : #000 !default;
+$grayDarker             : #222 !default;
+$grayDark               : #333 !default;
+$gray                   : #555 !default;
+$grayLight              : #999 !default;
+$grayLighter            : #eee !default;
+$white                  : #fff !default;
+
+// Accent colors
+// -------------------------
+$blue                   : #049cdb !default;
+$blueDark               : #0064cd !default;
+$green                  : #46a546 !default;
+$red                    : #9d261d !default;
+$yellow                 : #ffc40d !default;
+$orange                 : #f89406 !default;
+$pink                   : #c3325f !default;
+$purple                 : #7a43b6 !default;
+

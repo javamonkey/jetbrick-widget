@@ -1,0 +1,76 @@
+.styleguide-content {
+  float: left;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #333;
+  width: 690px; }
+
+.styleguide-example {
+  margin: 15px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #dddddd;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+  .styleguide-example:first-child {
+    margin-top: 3px; }
+  .styleguide-example > h3 {
+    margin: -1px -1px 0;
+    padding: 10px;
+    color: #FFF;
+    font-size: 12px;
+    background-color: #333;
+    border-top: 1px solid black; }
+    .styleguide-example > h3 > em, .styleguide-example > h3 > em > a {
+      float: right;
+      font-style: normal;
+      font-weight: normal;
+      color: #aaa; }
+  .styleguide-example .styleguide-description {
+    padding: 1px 10px;
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #dddddd; }
+  .styleguide-example .styleguide-element {
+    position: relative;
+    padding: 20px; }
+    .styleguide-example .styleguide-element .styleguide-modifier-name {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 15px;
+      font-size: 11px;
+      color: #999;
+      background-color: whitesmoke;
+      border: 1px solid #eeeeee;
+      border-top: none; }
+  .styleguide-example .styleguide-html {
+    position: relative;
+    padding: 15px 15px;
+    background-color: #edf6f8;
+    border-top: 1px solid #dde7ea;
+    overflow: auto; }
+    .styleguide-example .styleguide-html:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 15px;
+      font-size: 11px;
+      color: #999;
+      background-color: whitesmoke;
+      border: 1px solid #dde7ea;
+      border-top: none;
+      content: "Example"; }
+    .styleguide-example .styleguide-html .syntaxhighlighter {
+      margin: 0 !important;
+      background-color: #edf6f8 !important; }
+      .styleguide-example .styleguide-html .syntaxhighlighter td.code .line {
+        background-color: #edf6f8 !important;
+        font-size: 13px !important;
+        line-height: 1.4 !important; }
+
+.styleguide-element + .styleguide-element {
+  border-top: 1px solid #eeeeee; }
+
+.styleguide-html + .styleguide-element {
+  border-top: 1px solid #dde7ea; }

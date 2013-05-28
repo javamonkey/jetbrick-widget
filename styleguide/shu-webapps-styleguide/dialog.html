@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dialog - StyleGuide - Jetbrick</title>
+
+    <link href="css/jetbrick-dependence.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jetbrick-widget.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/styleguide.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jetbrick-dependence.min.js"></script>
+    <script type="text/javascript" src="js/jetbrick-widget.min.js"></script>
+    <script type="text/javascript" src="js/styleguide.js"></script>
+</head>
+<body>
+
+<br/>
+
+<div class="container">
+    <div class="jb-nav-list-container">
+        <ul class="jb-nav-list">
+            <li><a href="overview.html">0. Overview</a></li>
+            <li><a href="numeric-input.html">1. Numeric Input</a></li>
+            <li><a href="date-picker.html">2. Date Picker</a></li>
+            <li><a href="flash-uploader.html">3. Flash Uploader</a></li>
+            <li><a href="iphone-toggle.html">4. IPhone Toggle</a></li>
+            <li><a href="html-editor.html">5. HTML Editor</a></li>
+            <li><a href="teacher-selector.html">6. Teacher Selector</a></li>
+            <li><a href="department-tree.html">7. Department Tree</a></li>
+            <li><a href="location-tree.html">8. Location Tree</a></li>
+            <li><a href="bucket-date.html">9. Bucket Date</a></li>
+            <li><a href="bucket-time.html">10. Bucket Time</a></li>
+            <li><a href="bucket-week.html">11. Bucket Week</a></li>
+            <li class="selected"><a href="dialog.html">12. Dialog</a></li>
+            <li><a href="ajax.html">13. Ajax</a></li>
+        </ul>
+    </div>
+
+    <div class="styleguide-content">
+        <div class="styleguide-example">
+            <h3>
+                12.1 标准对话框
+                <em><a href="dialog.coffee">dialog.coffee</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+                显示各种标准对话框
+                <ul>
+                    <li>$GDK.dialog.<b>alert</b>(succ, message, callback)</li>
+                    <li>$GDK.dialog.<b>info</b>(message, callback)</li>
+                    <li>$GDK.dialog.<b>warning</b>(message, callback)</li>
+                    <li>$GDK.dialog.<b>error</b>(message, callback)</li>
+                    <li>$GDK.dialog.<b>confirm</b>(message, callback)</li>
+                    <li>$GDK.dialog.<b>prompt</b>(message, callback, defaultValue)</li>
+                </ul>
+            </div>
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">info</span>
+                <img src="images/dialog-1.png" />
+            </div>
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">error</span>
+                <img src="images/dialog-2.png" />
+            </div>
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">confirm</span>
+                <img src="images/dialog-3.png" />
+            </div>
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">prompt</span>
+                <img src="images/dialog-4.png" />
+            </div>
+            <div class="styleguide-html">
+                <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+                    $GDK.dialog.info("保存成功", function() {
+                        // do something
+                    });
+                ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+
+        <div class="styleguide-example">
+            <h3>
+                12.2 自定义对话框
+                <em><a href="dialog.coffee">dialog.coffee</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+                <p>$GDK.dialog.open(options), 具体定义可以参考：artDialog 4.x</p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>type</th>
+                        <th>default</th>
+                        <th>description</th>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>string</td>
+                        <td>'消息'</td>
+                        <td>标题内容</td>
+                    </tr>
+                    <tr>
+                        <td>content</td>
+                        <td>string/HTMLElement</td>
+                        <td></td>
+                        <td>消息内容。<br/>
+                            1、如果传入的是HTMLElement类型，如果是隐藏元素会给其设置display:block以显示该元素，其他属性与绑定的事件都会完整保留，对话框关闭后此元素又将恢复原来的display属性，并且重新插入原文档所在位置<br/>
+                            2、如果没有设定content的值则会有loading的动画
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ok</td>
+                        <td>Boolean/Function</td>
+                        <td></td>
+                        <td>确定按钮回调函数。<br/>
+                            函数如果返回false将阻止对话框关闭；函数this指针指向内部api；如果传入true表示只显示有关闭功能的按钮
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>cancel</td>
+                        <td>Boolean/Function</td>
+                        <td></td>
+                        <td>取消按钮回调函数。<br/>
+                            函数如果返回false将阻止对话框关闭；函数this指针指向内部api；如果传入true表示只显示有关闭功能的按钮<br/>
+                            对话框标题栏的关闭按钮其实就是取消按钮，只不过视觉不同罢了，点击同样触发cancel事件
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>okVal</td>
+                        <td>string</td>
+                        <td>'确定'</td>
+                        <td>"确定按钮"文字</td>
+                    </tr>
+                    <tr>
+                        <td>cancelVal</td>
+                        <td>string</td>
+                        <td>'取消'</td>
+                        <td>"取消按钮"文字</td>
+                    </tr>
+                    <tr>
+                        <td>button</td>
+                        <td>Array</td>
+                        <td></td>
+                        <td>自定义按钮。<br/>
+                            配置参数成员：<br/>
+                            name —— 按钮名称<br/>
+                            callback —— 按下后执行的函数<br/>
+                            focus —— 是否聚焦点<br/>
+                            disabled —— 是否标记按钮为不可用状态（后续可使用扩展方法让其恢复可用状态）<br/>
+                            <br/>
+                            示例：<br/>
+                            参数如：[{name: '登录', callback: function () {}}, {name: '取消'}] 。注意点击按钮默认会触发按钮关闭动作，需要阻止触发关闭请让回调函数返回false
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>Number/String</td>
+                        <td>'auto'</td>
+                        <td>设置消息内容宽度，可以带单位。一般不需要设置此，对话框框架会自己适应内容。<br/>
+                            如果设置为百分值单位，将会以根据浏览器可视范围作为基准，此时如果浏览器窗口大小被改变其也会进行相应的调整
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>Number/string</td>
+                        <td>'auto'</td>
+                        <td>设置消息内容高度，可以带单位。不建议设置此，而应该让内容自己撑开高度。<br/>
+                            如果设置为百分值单位，将会以根据浏览器可视范围作为基准，此时如果浏览器窗口大小被改变其也会进行相应的调整
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>init</td>
+                        <td>Function</td>
+                        <td></td>
+                        <td>对话框弹出后执行的函数</td>
+                    </tr>
+                    <tr>
+                        <td>close</td>
+                        <td>Function</td>
+                        <td></td>
+                        <td>对话框关闭前执行的函数。函数如果返回false将阻止对话框关闭。<br/>
+                            请注意这不是关闭按钮的回调函数，无论何种方式关闭对话框，close都将执行。
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">info</span>
+                <img src="images/dialog-5.png" />
+            </div>
+             <div class="styleguide-html">
+                <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+                    var html  = '<input type="text" name="teacherId" '
+                        html += '       gdk-api="teacher-selector" multi="true" '
+                        html += '       admin="false" style="width:350px;" />';
+
+                    $GDK.dialog.open('选择授课教师', html, {
+                        init: function() {
+                            $('[name=teacherId]').styleWidget();
+                        },
+                        ok: function() {
+                            var id = this.DOM.main.find('[name=teacherId]').val();
+                            $GDK.redirect('course_manager_list.shtml?method=addSave&id=' + id);
+                        }
+                    });
+                ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+    </div> <!-- / .styleguide-content -->
+
+</div> <!-- / .container -->
+</body>
+</html>

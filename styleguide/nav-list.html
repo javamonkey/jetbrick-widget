@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nav-list - StyleGuide - Jetbrick</title>
+
+    <link href="../build/css/jetbrick-dependence.css" rel="stylesheet" type="text/css" />
+    <link href="../build/css/jetbrick-widget.css" rel="stylesheet" type="text/css" />
+    <link href="styleguide.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../build/js/jetbrick-dependence.js"></script>
+    <script type="text/javascript" src="../build/js/jetbrick-widget.js"></script>
+    <script type="text/javascript" src="styleguide.js"></script>
+</head>
+<body>
+
+<br/>
+
+<div class="container">
+    <div class="jb-nav-list-container">
+        <ul class="jb-nav-list">
+            <li><a href="overview.html">0. Overview</a></li>
+            <li><a href="buttons.html">1. Buttons<span class="counter">3</span></a></li>
+            <li><a href="boxed-groups.html">2. Boxed Groups</a></li>
+            <li><a href="nav-tab.html">3. nav-tab<span class="counter">4</span></a></li>
+            <li class="selected"><a href="nav-list.html">4. nav-list</a></li>
+            <li><a href="nav-list-pills.html">5. nav-list-pills</a></li>
+        </ul>
+    </div>
+
+    <div class="styleguide-content">
+        <div class="styleguide-example">
+            <h3>
+                4.1 Nav-list
+                <em><a href="_nav-list.scss">_nav-list.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+                <p>主要用于竖型菜单栏显示，通常位于左边。</p>
+            </div>
+            <div class="styleguide-html" api="auto-demo">
+                <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+                    <div class="jb-nav-list-container">
+                        <ul class="jb-nav-list">
+                            <li class="selected"><a href="#">Foo Tab</a></li>
+                            <li><a href="#">Bar Tab</a></li>
+                            <li><a href="#">Bar Tab</a></li>
+                        </ul>
+                    </div>
+                ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+
+        <div class="styleguide-example">
+            <h3>
+                4.2 Nav-list
+                <em><a href="_nav-list.scss">_nav-list.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+                <p>增加计数器</p>
+            </div>
+            <div class="styleguide-html" api="auto-demo">
+                <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+                    <div class="jb-nav-list-container">
+                        <ul class="jb-nav-list">
+                            <li class="selected"><a href="#">Foo Tab<span class="counter">8</span></a></li>
+                            <li><a href="#">Bar Tab<span class="counter">2</span></a></li>
+                            <li><a href="#">Bar Tab<span class="counter">18</span></a></li>
+                        </ul>
+                    </div>
+                    ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+    </div> <!-- / .styleguide-content -->
+
+</div> <!-- / .container -->
+</body>
+</html>

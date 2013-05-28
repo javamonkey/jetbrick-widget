@@ -1,0 +1,58 @@
+$MENU-BAR-HEIGHT            : 30px;
+$MENU-BAR-FONT-COLOR        : #fff;
+$MENU-BAR-BACKGROUND-COLOR  : #4E92D7;
+
+ul.jb-menu-bar {
+  background-color: $MENU-BAR-BACKGROUND-COLOR;
+  height: $MENU-BAR-HEIGHT;
+}
+
+ul.jb-menu-bar > li {
+  float: left;
+  position: relative;
+
+  > a {
+    display: block;
+    padding: 0 12px;
+    line-height: $MENU-BAR-HEIGHT;
+    color: #fff;
+  }
+
+  > ul {
+    display: none;
+    position: absolute;
+
+    background-color: #fff;
+    border: 1px #ddd solid;
+    border-top: none;
+    @include border-radius(0 0 3px 3px);
+    @include box-shadow(0 5px 5px #D3D3D3);
+
+    > li > a {
+      display: block;
+      padding: 0 12px;
+      line-height: $MENU-BAR-HEIGHT;
+      white-space: nowrap;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $MENU-BAR-BACKGROUND-COLOR;
+        color: $MENU-BAR-FONT-COLOR;
+      }
+    }
+  }
+
+  &:hover {
+    > a {
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+    }
+
+    > ul {
+      display:block;
+    }
+  }
+
+}

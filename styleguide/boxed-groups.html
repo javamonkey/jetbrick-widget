@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Boxed Group - StyleGuide - Jetbrick</title>
+
+    <link href="../build/css/jetbrick-dependence.css" rel="stylesheet" type="text/css" />
+    <link href="../build/css/jetbrick-widget.css" rel="stylesheet" type="text/css" />
+    <link href="styleguide.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../build/js/jetbrick-dependence.js"></script>
+    <script type="text/javascript" src="../build/js/jetbrick-widget.js"></script>
+    <script type="text/javascript" src="styleguide.js"></script>
+</head>
+<body>
+
+<br/>
+
+<div class="container">
+    <div class="jb-nav-list-container">
+        <ul class="jb-nav-list">
+            <li><a href="overview.html">0. Overview</a></li>
+            <li><a href="buttons.html">1. Buttons<span class="counter">3</span></a></li>
+            <li class="selected"><a href="boxed-groups.html">2. Boxed Groups</a></li>
+            <li><a href="nav-tab.html">3. nav-tab</a></li>
+        </ul>
+    </div>
+
+    <div class="styleguide-content">
+        <div class="styleguide-example">
+            <h3>
+                2.1 Boxed Group
+                <em><a href="_boxed-group.scss">_boxed-group.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+
+                <p>Boxed Group, 主要用于配置页面。</p>
+
+                <p></p>
+                <ul class="styleguide-modifier">
+                    <li><strong>.danger</strong> - LANA.</li>
+                </ul>
+            </div>
+            <div class="styleguide-html" api="auto-demo">
+                <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+                    <div class="jb-boxed-group">
+                        <h3>Heading</h3>
+                        <div class="jb-boxed-group-content markdown-body">
+                            <p>Boxed groups can have markdown content if you like.
+                               Which can be nice for <code>code blocks</code> and such.
+                            </p>
+                        </div>
+                    </div>
+                ]]></script>
+            </div>
+
+            <div class="styleguide-html" api="auto-demo" data-modifier-name=".danger">
+                <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+                    <div class="jb-boxed-group danger">
+                        <h3>Heading</h3>
+                        <div class="jb-boxed-group-content markdown-body">
+                            <p>Boxed groups can have markdown content if you like.
+                               Which can be nice for <code>code blocks</code> and such.
+                            </p>
+                        </div>
+                    </div>
+                ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+        <div class="styleguide-example">
+            <h3>
+                2.2 Listed Item in Boxed Group
+                <em><a href="_boxed-group.scss">_boxed-group.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+                <p>Boxed Group 里面放置一个 List。</p>
+            </div>
+            <div class="styleguide-html" api="auto-demo">
+                <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+                    <div class="jb-boxed-group">
+                        <a href="#" class="button mini">你可以再这里新建一个项目</a>
+                        <h3>Heading</h3>
+                        <div class="jb-boxed-group-content">
+                            <p>Boxed groups can have lists of things inside of them.</p>
+                            <ul class="jb-boxed-group-list">
+                                <li>
+                                    This is a simple list
+                                    <a href="#" class="button mini">编辑</a>
+                                </li>
+                                <li>
+                                    It has items
+                                    <a href="#" class="button mini">编辑</a>
+                                </li>
+                                <li>
+                                    Sometimes, three!
+                                    <a href="#" class="button mini danger">删除</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                 ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+    </div> <!-- / .styleguide-content -->
+
+</div> <!-- / .container -->
+</body>
+</html>

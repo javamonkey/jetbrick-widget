@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Button - StyleGuide - Jetbrick</title>
+
+    <link href="../build/css/jetbrick-dependence.css" rel="stylesheet" type="text/css" />
+    <link href="../build/css/jetbrick-widget.css" rel="stylesheet" type="text/css" />
+    <link href="styleguide.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../build/js/jetbrick-dependence.js"></script>
+    <script type="text/javascript" src="../build/js/jetbrick-widget.js"></script>
+    <script type="text/javascript" src="styleguide.js"></script>
+</head>
+<body>
+
+<br/>
+
+<div class="container">
+    <div class="jb-nav-list-container">
+        <ul class="jb-nav-list">
+            <li><a href="shu-webapps/overview.html">0. Overview</a></li>
+            <li class="selected"><a href="buttons.html">1. Buttons<span class="counter">3</span></a></li>
+            <li><a href="boxed-groups.html">2. Boxed Groups</a></li>
+            <li><a href="select-menu.html">3. Select Menu</a></li>
+        </ul>
+    </div>
+
+    <div class="styleguide-content">
+        <div class="styleguide-example">
+            <h3>
+                1.1 Buttons
+                <em><a href="_button.scss">_button.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+
+                <p>标准的Button样式，可以用<code>button</code>或者<code>a</code>来定义.
+                    需要加入class<code>.button</code>即可。<br/>
+                    同时，button也具有下面的多种状态。
+                </p>
+
+                <p></p>
+                <ul class="styleguide-modifier">
+                    <li><strong>:hover</strong> - Buttons love hover states.</li>
+                    <li><strong>:active</strong> - Buttons love active states.</li>
+                    <li><strong>.disabled</strong> - Same as the disabled pseudo-class.</li>
+                    <li><strong>.primary</strong> - For the main form action, use whenever creating something.</li>
+                    <li><strong>.primary:hover</strong> - Hover state fo primary buttons.</li>
+                    <li><strong>.primary:active</strong> - A brief moment of polish when the button is pressed.</li>
+                    <li><strong>.primary.disabled</strong> - Same as the disabled pseudo-class.</li>
+                    <li><strong>.success</strong> - Success button.</li>
+                    <li><strong>.success:hover</strong> - Hover state fo success buttons.</li>
+                    <li><strong>.success:active</strong> - Depressed success button.</li>
+                    <li><strong>.success.disabled</strong> - Same as the disabled pseudo-class.</li>                    <li><strong>.warning</strong> - Warning button.</li>
+                    <li><strong>.warning:hover</strong> - Hover state fo warning buttons.</li>
+                    <li><strong>.warning:active</strong> - Depressed warning button.</li>
+                    <li><strong>.warning.disabled</strong> - Same as the disabled pseudo-class.</li>
+                    <li><strong>.danger</strong> - For potentially bad or destructive actions.</li>
+                    <li><strong>.danger:hover</strong> - Hover state for danger buttons.</li>
+                    <li><strong>.danger:active</strong> - Depressed danger button.</li>
+                    <li><strong>.danger.disabled</strong> - Same as the disabled pseudo-class.</li>
+                    <li><strong>.dark-grey</strong> - Alternate button.</li>
+                    <li><strong>.dark-grey:hover</strong> - Hover state for alternate buttons.</li>
+                    <li><strong>.dark-grey:active</strong> - Depressed alternate button.</li>
+                    <li><strong>.dark-grey.disabled</strong> - Same as the disabled pseudo-class.</li>
+                </ul>
+            </div>
+            <div class="styleguide-element">
+                <button class="button">button.button</button>
+                <a class="button">a.button</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.disabled</span>
+
+                <button class="button disabled">button.button .disabled</button>
+                <a class="button disabled">a.button .disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.primary</span>
+
+                <button class="button primary">button.button .primary</button>
+                <a class="button primary">a.button .primary</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.primary.disabled</span>
+
+                <button class="button primary disabled">button.button .primary.disabled</button>
+                <a class="button primary disabled">a.button .primary.disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.info</span>
+
+                <button class="button info">button.button .info</button>
+                <a class="button info">a.button .info</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.info.disabled</span>
+
+                <button class="button info disabled">button.button .info.disabled</button>
+                <a class="button info disabled">a.button .info.disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.success</span>
+
+                <button class="button success">button.button .success</button>
+                <a class="button success">a.button .success</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.success.disabled</span>
+
+                <button class="button success disabled">button.button .success.disabled</button>
+                <a class="button success disabled">a.button .success.disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.warning</span>
+
+                <button class="button warning">button.button .warning</button>
+                <a class="button warning">a.button .warning</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.warning.disabled</span>
+
+                <button class="button warning disabled">button.button .warning.disabled</button>
+                <a class="button warning disabled">a.button .warning.disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.danger</span>
+
+                <button class="button danger">button.button .danger</button>
+                <a class="button danger">a.button .danger</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.danger.disabled</span>
+
+                <button class="button danger disabled">button.button .danger.disabled</button>
+                <a class="button danger disabled">a.button .danger.disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.dark-grey</span>
+
+                <button class="button dark-grey">button.button .dark-grey</button>
+                <a class="button dark-grey">a.button .dark-grey</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.dark-grey.disabled</span>
+
+                <button class="button dark-grey disabled">button.button .dark-grey.disabled</button>
+                <a class="button dark-grey disabled">a.button .dark-grey.disabled</a>
+            </div>
+
+            <div class="styleguide-element">
+                <span class="styleguide-modifier-name">.highlighter</span>
+
+                <button class="button highlighter">button.button .highlighter</button>
+                <a class="button highlighter">a.button .highlighter</a>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.highlighter.disabled</span>
+
+                <button class="button highlighter disabled">button.button .highlighter.disabled</button>
+                <a class="button highlighter disabled">a.button .highlighter.disabled</a>
+            </div>
+        </div>
+
+        <div class="styleguide-example">
+            <h3>
+                1.2 Mini Buttons
+                <em><a href="_button.scss">_button.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+
+                <p>Mini Button样式，在标准的Button里面加入class<code>.mini</code>即可。<br/>
+                    同时，mini button也具有下面的多种状态。
+                </p>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.mini</span>
+
+                <div style="line-height:35px;">
+                    <button class="button mini">.mini</button>
+                    <button class="button mini primary">.mini .primary</button>
+                    <button class="button mini info">.mini .info</button>
+                    <button class="button mini success">.mini .success</button>
+                    <button class="button mini warning">.mini .warning</button>
+                    <button class="button mini danger">.mini .danger</button>
+                    <button class="button mini dark-grey">.mini .dark-grey</button>
+                    <button class="button mini highlighter">.mini .highlighter</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="styleguide-example">
+            <h3>
+                1.2 Large Buttons
+                <em><a href="_button.scss">_button.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+
+                <p>Large Button样式，在标准的Button里面加入class<code>.large</code>即可。<br/>
+                    同时，large button也具有下面的多种状态。
+                </p>
+            </div>
+            <div class="styleguide-element styleguide-modifier">
+                <span class="styleguide-modifier-name">.large</span>
+
+                <div style="line-height:55px;">
+                    <button class="button large">.large</button>
+                    <button class="button large primary">.large .primary</button>
+                    <button class="button large info">.large .info</button>
+                    <button class="button large success">.large .success</button>
+                    <button class="button large warning">.large .warning</button>
+                    <button class="button large danger">.large .danger</button>
+                    <button class="button large dark-grey">.large .dark-grey</button>
+                    <button class="button large highlighter">.large .highlighter</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="styleguide-example">
+            <h3>
+                1.3 Button Group
+                <em><a href="_button.scss">_button.scss</a></em>
+            </h3>
+
+            <div class="styleguide-description markdown-body">
+                <p></p>
+
+                <p>将多个 Button 变成一个 Group</p>
+            </div>
+            <div class="styleguide-html" api="auto-demo">
+                <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+                    <div class="button-group">
+                        <button class="button">left</button>
+                        <button class="button actived">center</button>
+                        <button class="button highlighter">right</button>
+                        <button class="button danger">delete</button>
+                    </div>
+                ]]></script>
+            </div>
+        </div> <!-- / .styleguide-example -->
+
+    </div> <!-- / .styleguide-content -->
+
+</div> <!-- / .container -->
+</body>
+</html>

@@ -1,0 +1,198 @@
+
+@mixin simple-button-color($color) {
+  color: $color;
+  @if lightness($color) < 50% {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+  @else {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@mixin simple-button(
+  $normalBgColorStart, $normalBgColorEnd, $normalBorderColor, $normalBorderBottomColor, $normalFontColor,
+  $hoverBgColorStart, $hoverBgColorEnd, $hoverBorderColor, $hoverFontColor,
+  $activeBgColor, $activeBorderColor,
+  $disabledBgColorStart, $disabledBgColorEnd, $disabledBorderColor, $disabledFontColor) {
+
+  & {
+    @include simple-button-color($normalFontColor);
+
+    @include gradient-vertical($normalBgColorStart, $normalBgColorEnd);
+    border-color: $normalBorderColor;
+    border-bottom-color: $normalBorderBottomColor;
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.05));
+  }
+
+  &:hover {
+    @include simple-button-color($hoverFontColor);
+
+    @include gradient-vertical($hoverBgColorStart, $hoverBgColorEnd);
+    border-color: $hoverBorderColor;
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.05));
+  }
+
+  &:active, &.actived {
+    @include simple-button-color($hoverFontColor);
+
+    background-color: $activeBgColor;
+    background-image: none;
+    border-color: $activeBorderColor;
+    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.15));
+  }
+
+  &.disabled, &.disabled:hover, &.disabled:active {
+    @include simple-button-color($disabledFontColor);
+
+    @include gradient-vertical($disabledBgColorStart, $disabledBgColorEnd);
+    border-color: $disabledBorderColor;
+    @include box-shadow(none);
+  }
+}
+
+// button
+// ---------------------------------------
+button {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+// .button
+// ---------------------------------------
+.button {
+  position: relative;
+  @include inline-block();
+  padding: 0 14px;
+
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  @include user-select(none);
+  -webkit-appearance: none;
+
+  &, &:hover, &:active {
+    text-decoration: none;
+  }
+
+  &.disabled, &.disabled:hover, &.disabled:active {
+    opacity: .5;
+    cursor: default;
+  }
+}
+
+.button {
+  @include simple-button(
+    #fff, #e6e6e6, #dadada, #b5b5b5, #333,
+    #eaeaea, #c5c5c5, #b5b5b5, #333,
+    #dadada, #b5b5b5,
+    #f5f5f5, #e5e5e5, #c5c5c5, #666
+  );
+}
+
+// .button .primary
+// ---------------------------------------
+.button.primary {
+  @include simple-button(
+    #599bcd, #3072b3, #2a65a0, #25588c, #fff,
+    #3072b3, #2a65a0, #25588c, #fff,
+    #3072b3, #25588c,
+    #599bcd, #3072B3, #3072b3, #fff
+  );
+}
+
+// .button .success
+// ---------------------------------------
+.button.success {
+  @include simple-button(
+    #8add6d, #60b044, #5ca941, darken(#60b044, 8%), #fff,
+    #79d858, #569e3d, #4a993e, #fff,
+    #569e3d, #418737,
+    #8add6d, #60b044, #5ca941, #fff
+  );
+}
+
+// .button .info
+// ---------------------------------------
+.button.info {
+  @include simple-button(
+    #5bc0de, #2f96b4, #2f96b4, #1f6377, #fff,
+    darken(#5bc0de, 8%), darken(#2f96b4, 8%), #1f6377, #fff,
+    darken(#2f96b4, 8%), darken(#1f6377, 8%),
+    #5bc0de, #2f96b4, #2f96b4, #fff
+  );
+}
+
+// .button .warning
+// ---------------------------------------
+.button.warning {
+  @include simple-button(
+    #fbb450, #f88200, darken(#fbb450, 8%), darken(#f88200, 8%), #fff,
+    #f89406, #f47625, darken(#f89406, 8%), #fff,
+    #f88200, darken(#f47625, 10%),
+    #fbb450, #f88200, darken(#f88200, 8%), #fff
+  );
+}
+
+// .button .danger
+// ---------------------------------------
+.button.danger {
+  @include simple-button(
+    #fff, #e6e6e6, #dadada, #b5b5b5, #900,
+    #dc5f59, #b33630, #cd504a, #fff,
+    #b33630, #9f312c,
+    #f5f5f5, #e5e5e5, #c5c5c5, #900
+  );
+}
+
+// .button .dark-grey
+// ---------------------------------------
+.button.dark-grey {
+  @include simple-button(
+    #8c8c8c, #6d6d6d, #707070, #595959, #fff,
+    #6d6d6d, #585858, #474747, #fff,
+    #545454, #474747,
+    #8c8c8c, #6d6d6d, #595959, #fff
+  );
+}
+
+// .button .highlighter
+// ---------------------------------------
+.button.highlighter {
+  @include simple-button(
+    #fff, #e6e6e6, #dadada, #b5b5b5, #333,
+    #599BCD, #3072B3, #2A65A0, #fff,
+    #3072B3, #25588C,
+    #f5f5f5, #e5e5e5, #c5c5c5, #666
+  );
+}
+
+// mini button
+// -------------------------------------------
+.button.mini {
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+// large button
+// -------------------------------------------
+.button.large {
+  padding: 0px 16px;
+  font-size: 15px;
+  line-height: 36px;
+}
+
+.button.large-x {
+  padding: 0px 16px;
+  font-size: 18px;
+  line-height: 42px;
+}

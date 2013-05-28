@@ -1,0 +1,99 @@
+
+.jb-boxed-group {
+  position: relative;
+  background: #efefef;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 0 0 15px 0;
+
+  + .jb-boxed-group {
+    margin-top: 35px;
+  }
+
+  > h3, .heading {
+    @include gradient-vertical(#fafafa, #e0e0e0);
+
+    margin: 0;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border: 1px solid #d8d8d8;
+    border-bottom: none;
+    padding: 10px 10px 11px 10px;
+    font-size: 14px;
+    text-shadow: 0 1px 0 #fff;
+  }
+
+  &.danger > h3 {
+    @include gradient-vertical(#dc5f59, #b33630);
+
+    border-right: 1px solid #900;
+    border-bottom: 1px solid #900;
+    color: #fff;
+    text-shadow: 0 -1px 0 #900;
+  }
+
+  > .button {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    z-index: 10;
+    margin: 9px 10px 0 0;
+  }
+}
+
+.jb-boxed-group-content {
+  padding: 1px 10px;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-top: 1px solid #ccc;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  color: #666;
+  font-size: 13px;
+
+  &.markdown-body {
+    padding: 10px;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+}
+
+.jb-boxed-group-list {
+  list-style: none;
+  margin: 0;
+
+  > li {
+    display: block;
+    margin-left: -10px;
+    width: 100%;
+    padding: 5px 10px;
+    line-height: 23px;
+    border-bottom: 1px solid #e5e5e5;
+
+    &:hover {
+      background: #ffe;
+    }
+
+    &:first-child {
+      border-top: 1px solid #ddd;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.selected {
+      background: #e5f9e2;
+    }
+
+    .button {
+      float: right;
+      margin: -1px 0 0 10px;
+    }
+
+  }
+}
+

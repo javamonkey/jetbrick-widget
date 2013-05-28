@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>FlashUploader</title>
+
+    <script type="text/javascript" src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../vendor/underscore/underscore.string.js"></script>
+    <script type="text/javascript" src="../js-core/string.js"></script>
+    <script type="text/javascript" src="../api/api-loader.js"></script>
+    <script type="text/javascript" src="../api/api-utils.js"></script>
+	<script type="text/javascript" src="flash-uploader.js"></script>
+    
+    <style type="text/css">
+        button {
+            border: 4px grey solid;
+        }
+        button.flash-hover {
+          border: 4px red solid;
+        }
+        button.flash-active {
+          border: 4px blue solid;
+        }
+        
+        a {
+          color: black;
+        }
+        a.flash-hover {
+          color: blue;
+        }
+        a.flash-active {
+          color: red;
+        }
+    </style>
+</head>
+<body>
+	<div id="altContent">
+		<h1>FlashUploader</h1>
+	</div>
+    <button api="flash-uploader" 
+            data-movie="FlashUploader.swf?debug" 
+            data-url="/1234"
+            data-flashvars=""
+            >Upload File</button>
+    <br/><br/>
+    
+    <a api="flash-uploader" 
+            data-movie="FlashUploader.swf"
+            data-url="/0000"
+            >Upload File</a>
+    <br/><br/>
+    <button>Other</button>
+</body>
+</html>
