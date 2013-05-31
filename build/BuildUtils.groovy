@@ -121,9 +121,22 @@ def static shell_execute(String command, File currentDir) {
     //System.out.println "shell# ${command}";
     
     def p = command.execute(new String[0], currentDir);
+
+    def stdout;
+    Thread.start { 
+        stdout = p.getInputStream().getText("utf-8");
+    };
+
+    def stderr;
+    Thread.start { 
+        stderr = p.getErrorStream().getText("utf-8");
+    };
+    
     p.waitFor();
 
     if (p.exitValue() != 0) {
-        System.err << p.getErrorStream().getText("utf-8") << "\n"
+        System.err << stderr << "\n"
     }
+
+    p.destroy();
 }
