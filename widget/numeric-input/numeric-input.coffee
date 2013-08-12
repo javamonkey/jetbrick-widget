@@ -30,18 +30,25 @@ class jetbrick.api.NumericInput
 
     @dom.on "drop", -> return false
 
-    @dom.on "keyup", (e) ->
+    @dom.on "keyup", (e) =>
       # HOME, END, UP, DOWN, LEFT, RIGHT
       return true if 35 <= e.which <= 40
 
-      s = @value
+      s = @dom.val()
       s = s.replace(/[^\d.]/g, "")
+      
       #必须保证第一个为数字而不是.
       s = s.replace(/^\./g, "")
-      #保证只有出现一个.而没有多个.
-      s = s.replace(/\.{2,}/g, ".")
-      #保证.只出现一次，而不能出现两次以上
-      s = s.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".")
 
-      @value = s
+      if @options.decimal
+        #保证只有出现一个.而没有多个.
+        s = s.replace(/\.{2,}/g, ".")
+        #保证.只出现一次，而不能出现两次以上
+        s = s.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".")
+      else
+        #必须是整数
+        s = s.replace(/\./g, "")
+
+      @dom.val(s)
+
 
